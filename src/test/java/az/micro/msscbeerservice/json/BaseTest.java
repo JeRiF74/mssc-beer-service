@@ -1,6 +1,7 @@
 package az.micro.msscbeerservice.json;
 
 
+import az.micro.msscbeerservice.bootstrap.BeerLoader;
 import az.micro.msscbeerservice.web.model.BeerDto;
 import az.micro.msscbeerservice.web.model.BeerStyleEnum;
 
@@ -16,7 +17,7 @@ public class BaseTest {
                 .beerName("BeerName")
                 .beerStyle(BeerStyleEnum.GOSE)
                 .price(new BigDecimal(21.10))
-                .upc(12345L)
+                .upc(BeerLoader.BEER_1_UPC)
                 .createdDate(OffsetDateTime.now())
                 .version(1)
                 .build();
